@@ -1,0 +1,290 @@
+/* ==========================================================================
+   style.css - ملف التنسيق الموحد لموقع الشام لتأجير السيارات (IWB202 - F25)
+   الطالب: Sankoumba (175363)
+   ========================================================================== */
+
+/* 1. تنسيق الكلمات (نوع وحجم الخط والاتجاه) من مكان مركزي واحد */
+body, table, input, select, textarea, button, label, legend, p, li, a {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #1e293b;
+    direction: rtl;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f5f9;
+}
+
+/* 2. تنسيق عناصر الإدخال النصية من مكان واحد (اللون والحدود والخط) */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+.text-input {
+    width: 100%;
+    max-width: 420px;
+    padding: 9px 12px;
+    background-color: #f8fafc;
+    color: #0b5380;
+    border: 1.5px solid #94a3b8;
+    border-radius: 6px;
+    font-size: 14.5px;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+.text-input:focus {
+    background-color: #ffffff;
+    border-color: #0b5380;
+    color: #0f172a;
+    outline: none;
+}
+
+/* 3. الترويسة وشريط التنقل العلوي الموحد */
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 3px solid #b9a86b;
+    padding: 14px 24px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.site-header img.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 6px auto;
+}
+
+.site-header h1 {
+    font-size: 22px;
+    color: #0b5380;
+    margin: 4px 0;
+}
+
+.site-header p.subtitle {
+    font-size: 13.5px;
+    color: #64748b;
+    margin: 2px 0 10px 0;
+}
+
+.navbar {
+    background-color: #0b5380;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 7px 18px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    background-color: #b9a86b;
+    color: #0f172a;
+}
+
+/* 4. الحاوية الرئيسية والبطاقات */
+.container {
+    max-width: 1020px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.card h2 {
+    font-size: 19px;
+    color: #0b5380;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+/* 5. تنسيق الجداول */
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+}
+
+table.data-table th {
+    background-color: #0b5380;
+    color: #ffffff;
+    padding: 10px;
+    border: 1px solid #0b5380;
+    text-align: center;
+    font-size: 14.5px;
+}
+
+table.data-table td {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table.data-table tr.car-row:hover {
+    background-color: #f8fafc;
+}
+
+table.data-table tr.selected-row {
+    background-color: #e0f2fe;
+}
+
+tr.details-row {
+    display: none;
+    background-color: #fefce8;
+}
+
+tr.details-row td {
+    text-align: right;
+    padding: 12px 20px;
+    border-top: none;
+    color: #1e293b;
+}
+
+.details-badge {
+    display: inline-block;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    padding: 4px 10px;
+    margin: 3px 6px;
+    font-size: 13.5px;
+}
+
+img.car-thumb {
+    width: 115px;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #cbd5e1;
+}
+
+/* 6. تنسيق النماذج المتقدمة (fieldset, legend, label) والأزرار */
+fieldset {
+    border: 1.5px solid #0b5380;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-bottom: 18px;
+    background-color: #ffffff;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #0b5380;
+    padding: 4px 14px;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #0f172a;
+}
+
+.req-star {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.hint-text {
+    font-size: 12.5px;
+    color: #64748b;
+    display: block;
+    margin-top: 3px;
+}
+
+.error-msg {
+    color: #dc2626;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 4px;
+    display: none;
+}
+
+.btn {
+    background-color: #0b5380;
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #073b5c;
+}
+
+.btn-gold {
+    background-color: #b9a86b;
+    color: #0f172a;
+}
+
+.btn-gold:hover {
+    background-color: #9e8c4f;
+}
+
+#bookingSection {
+    display: none;
+    margin-top: 22px;
+}
+
+#resultBox {
+    display: none;
+    background-color: #f0fdf4;
+    border: 2px solid #16a34a;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-top: 20px;
+}
+
+.footer {
+    text-align: center;
+    padding: 16px;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    font-size: 13.5px;
+    margin-top: 30px;
+}
